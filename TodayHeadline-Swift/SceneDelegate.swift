@@ -16,7 +16,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow.init(windowScene: windowScene)
+        window?.frame = windowScene.coordinateSpace.bounds
+        let tabbarController = UITabBarController()
+        let gtNewsVC = GTNewsViewController()
+        gtNewsVC.tabBarItem.title = "新闻"
+        gtNewsVC.tabBarItem.image = UIImage.init(named: "page")
+        gtNewsVC.tabBarItem.selectedImage = UIImage.init(named: "page_selected")
+        
+        
+        let gtNewsVC0 = GTNewsViewController()
+        gtNewsVC0.tabBarItem.title = "新闻"
+        gtNewsVC0.tabBarItem.image = UIImage.init(named: "page")
+        gtNewsVC0.tabBarItem.selectedImage = UIImage.init(named: "page_selected")
+//        GTVideoViewController *videoController = [[GTVideoViewController alloc] init];
+        
+//        GTRecommendViewController *recommendController = [[GTRecommendViewController alloc] init];
+        
+//        UIViewController *controller4 = [[UIViewController alloc] init];
+//        controller4.view.backgroundColor = [UIColor greenColor];
+//        controller4.tabBarItem.title = @"我的";
+//        controller4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
+//        controller4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
+        
+        // 将四个页面的 UIViewController 加入到 UITabBarController 之中
+        tabbarController.setViewControllers([gtNewsVC, gtNewsVC0], animated: false)
+//        [tabbarController setViewControllers: @[viewcontroller, videoController, recommendController, controller4]];
+//        tabbarController.delegate = self;
+//        UINavigationController *navigationcontroller = [[UINavigationController alloc]initWithRootViewController:tabbarController];
+        let navigationController = UINavigationController.init(rootViewController: tabbarController)
+        window?.rootViewController  = navigationController
+//        self.window.rootViewController = navigationcontroller;
+        window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
