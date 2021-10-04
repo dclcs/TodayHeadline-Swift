@@ -22,8 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabbarController = UITabBarController()
         let gtNewsVC = GTNewsViewController()
         gtNewsVC.tabBarItem.title = "新闻"
-        gtNewsVC.tabBarItem.image = UIImage.init(named: "page")
-        gtNewsVC.tabBarItem.selectedImage = UIImage.init(named: "page_selected")
+        gtNewsVC.tabBarItem.image = #imageLiteral(resourceName: "page")
+        gtNewsVC.tabBarItem.selectedImage = #imageLiteral(resourceName: "page_selected")
         
         
         let gtNewsVC0 = GTNewsViewController()
