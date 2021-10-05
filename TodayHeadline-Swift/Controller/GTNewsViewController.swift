@@ -8,13 +8,27 @@
 import UIKit
 
 class GTNewsViewController: UIViewController {
-
+    
+    var loader: GTListLoader?
+    var dataArray: [GTListItem]?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         setupUI()
+        fetchData()
     }
     
+    
+    func fetchData() {
+        loader = GTListLoader()
+        loader?.loadListDataWithFinishBlock(finishBlock: { success, data in
+            
+            self.dataArray = data 
+            
+            self.tableView.reloadData()
+        })
+        
+    }
     
     func setupUI() {
         self.view.addSubview(tableView)
