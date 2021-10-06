@@ -22,7 +22,6 @@ class GTNewsViewController: UIViewController {
     func fetchData() {
         loader = GTListLoader()
         loader?.loadListDataWithFinishBlock(finishBlock: { [weak self] (success, data )in
-            //TODO: 添加到主线程
             guard let self = self else { return }
             self.dataArray = data!
             self.tableView.reloadData()
