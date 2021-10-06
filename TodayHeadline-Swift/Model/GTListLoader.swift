@@ -36,10 +36,12 @@ class GTListLoader{
                     listItemArray.append(listItem)
                 }
                 print(listItemArray)
-                
-                if ((finishBlock) != nil) {
-                    finishBlock!(error == nil, listItemArray)
+                DispatchQueue.main.async {
+                    if ((finishBlock) != nil) {
+                        finishBlock!(error == nil, listItemArray)
+                    }
                 }
+                
                 
             }catch {
                 

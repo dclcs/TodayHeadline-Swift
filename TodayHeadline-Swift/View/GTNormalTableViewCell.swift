@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class GTNormalTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -54,28 +54,11 @@ class GTNormalTableViewCell: UITableViewCell {
         timeLabel.frame = CGRect(x: commentLabel.frame.origin.x + self.timeLabel.frame.size.width +  15, y: timeLabel.frame.origin.y, width: timeLabel.frame.size.width, height: timeLabel.frame.size.height)
         
         
+        self.rightImageView.sd_setImage(with: URL.init(string: item.picUrl!)) { image, Error, cacheType, imageUrl in
+            
+            print("download img")
+        }
         
-        
-    //    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
-    //        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
-    //        self.rightimageView.image = image;
-    //    }];
-    //    downloadImageThread.name = @"downloadImageThread";
-    //    [downloadImageThread start];
-        
-    //    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    //    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
-    //    dispatch_async(downloadQueue, ^{
-    //        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
-    //
-    //        dispatch_async(mainQueue, ^{
-    //            self.rightimageView.image = image;
-    //        });
-    //    });
-        
-//        [self.rightimageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-//            NSLog(@"");
-//        }];
     }
     
     

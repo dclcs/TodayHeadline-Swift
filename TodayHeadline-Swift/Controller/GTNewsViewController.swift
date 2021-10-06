@@ -16,15 +16,16 @@ class GTNewsViewController: UIViewController {
         self.view.backgroundColor = .white
         setupUI()
         fetchData()
-        self.tableView.reloadData()
     }
     
     
     func fetchData() {
         loader = GTListLoader()
-        loader?.loadListDataWithFinishBlock(finishBlock: { success, data in
+        loader?.loadListDataWithFinishBlock(finishBlock: { [weak self] (success, data )in
             //TODO: 添加到主线程
+            guard let self = self else { return }
             self.dataArray = data!
+            self.tableView.reloadData()
         })
         
     }
@@ -47,11 +48,11 @@ class GTNewsViewController: UIViewController {
 
 extension GTNewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "id") as! GTNormalTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "id") as! GTNormalTableViewCell
 //        if((cell == nil)){
 ////            cell = [[GTNormalTableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"id"];
 //            cell = GTNormalTableViewCell.init(style: .subtitle, reuseIdentifier: "id")
@@ -62,9 +63,8 @@ extension GTNewsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return dataArray.count
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     
