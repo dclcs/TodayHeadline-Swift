@@ -1,0 +1,6 @@
+framework module Pods_TodayHeadline_Swift {
+  umbrella header "Pods-TodayHeadline-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
