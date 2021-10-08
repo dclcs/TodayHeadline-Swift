@@ -26,10 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         gtNewsVC.tabBarItem.selectedImage = #imageLiteral(resourceName: "page_selected")
         
         
-        let gtNewsVC0 = GTNewsViewController()
-        gtNewsVC0.tabBarItem.title = "新闻"
-        gtNewsVC0.tabBarItem.image = UIImage.init(named: "page")
-        gtNewsVC0.tabBarItem.selectedImage = UIImage.init(named: "page_selected")
+        let gtNewsVC0 = GTVideoViewController()
+        gtNewsVC0.tabBarItem.title = "视频"
+        gtNewsVC0.tabBarItem.image = #imageLiteral(resourceName: "video")
+        gtNewsVC0.tabBarItem.selectedImage = #imageLiteral(resourceName: "video_selected")
 //        GTVideoViewController *videoController = [[GTVideoViewController alloc] init];
         
 //        GTRecommendViewController *recommendController = [[GTRecommendViewController alloc] init];

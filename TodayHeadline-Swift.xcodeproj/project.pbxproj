@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		34FBCB564248FCCE77304D98 /* Pods_TodayHeadline_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E3EC1073767F639A93C400 /* Pods_TodayHeadline_Swift.framework */; };
+		6F5D9BA027107C9100EA8DBF /* GTVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D9B9F27107C9100EA8DBF /* GTVideoViewController.swift */; };
+		6F5D9BA42710812A00EA8DBF /* GTVideoCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D9BA32710812A00EA8DBF /* GTVideoCoverView.swift */; };
+		6F5D9BA82710872900EA8DBF /* GTVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D9BA72710872900EA8DBF /* GTVideoPlayer.swift */; };
 		6FBC5F96270C2764002381C9 /* GTListLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC5F95270C2764002381C9 /* GTListLoader.swift */; };
 		6FBC5F98270C295C002381C9 /* GTListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC5F97270C295C002381C9 /* GTListItem.swift */; };
 		6FBC5F9D270C9122002381C9 /* GTNormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC5F9C270C9122002381C9 /* GTNormalTableViewCell.swift */; };
 		6FD805AB270B532B007C2B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD805AA270B532B007C2B66 /* AppDelegate.swift */; };
 		6FD805AD270B532B007C2B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD805AC270B532B007C2B66 /* SceneDelegate.swift */; };
-		6FD805AF270B532B007C2B66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD805AE270B532B007C2B66 /* ViewController.swift */; };
 		6FD805B2270B532B007C2B66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD805B0270B532B007C2B66 /* Main.storyboard */; };
 		6FD805B4270B532F007C2B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD805B3270B532F007C2B66 /* Assets.xcassets */; };
 		6FD805B7270B532F007C2B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD805B5270B532F007C2B66 /* LaunchScreen.storyboard */; };
@@ -22,13 +24,15 @@
 
 /* Begin PBXFileReference section */
 		26462A6F83AB7957CF3D1280 /* Pods-TodayHeadline-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHeadline-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TodayHeadline-Swift/Pods-TodayHeadline-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		6F5D9B9F27107C9100EA8DBF /* GTVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTVideoViewController.swift; sourceTree = "<group>"; };
+		6F5D9BA32710812A00EA8DBF /* GTVideoCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTVideoCoverView.swift; sourceTree = "<group>"; };
+		6F5D9BA72710872900EA8DBF /* GTVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTVideoPlayer.swift; sourceTree = "<group>"; };
 		6FBC5F95270C2764002381C9 /* GTListLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTListLoader.swift; sourceTree = "<group>"; };
 		6FBC5F97270C295C002381C9 /* GTListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTListItem.swift; sourceTree = "<group>"; };
 		6FBC5F9C270C9122002381C9 /* GTNormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTNormalTableViewCell.swift; sourceTree = "<group>"; };
 		6FD805A7270B532B007C2B66 /* TodayHeadline-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TodayHeadline-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD805AA270B532B007C2B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FD805AC270B532B007C2B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6FD805AE270B532B007C2B66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6FD805B1270B532B007C2B66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FD805B3270B532F007C2B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FD805B6270B532F007C2B66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,8 +60,79 @@
 				26462A6F83AB7957CF3D1280 /* Pods-TodayHeadline-Swift.debug.xcconfig */,
 				FB1E4AC1010E63250599DE71 /* Pods-TodayHeadline-Swift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F5D9B9A27107BFF00EA8DBF /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				6F5D9B9D27107C3A00EA8DBF /* Video */,
+				6F5D9B9B27107C0800EA8DBF /* News */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		6F5D9B9B27107C0800EA8DBF /* News */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC5F99270C90B7002381C9 /* View */,
+				6FBC5F94270C2751002381C9 /* Model */,
+				6FD805BE270B5452007C2B66 /* Controller */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		6F5D9B9C27107C1E00EA8DBF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6FD805AA270B532B007C2B66 /* AppDelegate.swift */,
+				6FD805AC270B532B007C2B66 /* SceneDelegate.swift */,
+				6FD805B0270B532B007C2B66 /* Main.storyboard */,
+				6FD805B3270B532F007C2B66 /* Assets.xcassets */,
+				6FD805B5270B532F007C2B66 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		6F5D9B9D27107C3A00EA8DBF /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				6F5D9BA1271080FD00EA8DBF /* View */,
+				6F5D9B9E27107C6D00EA8DBF /* Controller */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		6F5D9B9E27107C6D00EA8DBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F5D9B9F27107C9100EA8DBF /* GTVideoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6F5D9BA1271080FD00EA8DBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F5D9BA32710812A00EA8DBF /* GTVideoCoverView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6F5D9BA52710870500EA8DBF /* Componet */ = {
+			isa = PBXGroup;
+			children = (
+				6F5D9BA62710871000EA8DBF /* Video */,
+			);
+			path = Componet;
+			sourceTree = "<group>";
+		};
+		6F5D9BA62710871000EA8DBF /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				6F5D9BA72710872900EA8DBF /* GTVideoPlayer.swift */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		6FBC5F94270C2751002381C9 /* Model */ = {
@@ -98,16 +173,10 @@
 		6FD805A9270B532B007C2B66 /* TodayHeadline-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				6FBC5F99270C90B7002381C9 /* View */,
-				6FBC5F94270C2751002381C9 /* Model */,
-				6FD805BE270B5452007C2B66 /* Controller */,
-				6FD805AA270B532B007C2B66 /* AppDelegate.swift */,
-				6FD805AC270B532B007C2B66 /* SceneDelegate.swift */,
-				6FD805AE270B532B007C2B66 /* ViewController.swift */,
-				6FD805B0270B532B007C2B66 /* Main.storyboard */,
-				6FD805B3270B532F007C2B66 /* Assets.xcassets */,
-				6FD805B5270B532F007C2B66 /* LaunchScreen.storyboard */,
+				6F5D9BA52710870500EA8DBF /* Componet */,
 				6FD805B8270B532F007C2B66 /* Info.plist */,
+				6F5D9B9C27107C1E00EA8DBF /* Other */,
+				6F5D9B9A27107BFF00EA8DBF /* Pages */,
 			);
 			path = "TodayHeadline-Swift";
 			sourceTree = "<group>";
@@ -243,11 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5D9BA82710872900EA8DBF /* GTVideoPlayer.swift in Sources */,
 				6FBC5F9D270C9122002381C9 /* GTNormalTableViewCell.swift in Sources */,
 				6FD805C0270B5468007C2B66 /* GTNewsViewController.swift in Sources */,
-				6FD805AF270B532B007C2B66 /* ViewController.swift in Sources */,
 				6FD805AB270B532B007C2B66 /* AppDelegate.swift in Sources */,
 				6FBC5F96270C2764002381C9 /* GTListLoader.swift in Sources */,
+				6F5D9BA027107C9100EA8DBF /* GTVideoViewController.swift in Sources */,
+				6F5D9BA42710812A00EA8DBF /* GTVideoCoverView.swift in Sources */,
 				6FD805AD270B532B007C2B66 /* SceneDelegate.swift in Sources */,
 				6FBC5F98270C295C002381C9 /* GTListItem.swift in Sources */,
 			);
